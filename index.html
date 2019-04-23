@@ -11,6 +11,7 @@
 
         <script type="text/javascript" src="node_modules/purejs-onepage-scroll/onepagescroll.js"></script>
         <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="antsAnimation.js"></script>
         
     
     </head>
@@ -24,16 +25,16 @@
         <div class="header-right">
             <ul class="nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Domov</a>
+                    <a class="nav-link linkDomov">Domov</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Živali</a>
+                    <a class="nav-link linkZivali">Živali</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Cenik</a>
+                    <a class="nav-link linkCenik" >Cenik</a>
                 </li>
                 <li class="nav-item">
-                        <a class="nav-link" href="#">Kontakt</a>
+                    <a class="nav-link linkKontakt">Kontakt</a>
                 </li>
             </ul>
         </div>
@@ -72,6 +73,7 @@
                         <span class="font-2 half-transparent">Smo...</span>
                     </div>
                 </div>
+                <canvas id="canvasAnts" width="1600" height="900"></canvas>
             </section>
             
             <section id="section2">
@@ -81,6 +83,9 @@
                         <div class="from-bottom-container">
                             <div class="from-bottom-text">
                                 <span class="font-2 half-transparent">Najbolj drznen</span>
+                                <div class="description font-3">
+                                        Planinski orel - Fratis Planinicus
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -89,6 +94,9 @@
                         <div class="from-bottom-container">
                             <div class="from-bottom-text">
                                 <span class="font-2 half-transparent">Najbolj prisrčen</span>
+                                <div class="description font-3">
+                                        Mala miška - Brentus Malacis
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -101,6 +109,9 @@
                     <div class="from-bottom-container">
                             <div class="from-bottom-text">
                                 <span class="font-2 half-transparent">Najbolj barvit</span>
+                                <div class="description font-3">
+                                        Roza flamingo - Flamingus Rosealiciunis
+                                </div>
                             </div>
                         </div>
                     
@@ -121,13 +132,21 @@
                             <div class="from-bottom-container">
                                     <div class="from-bottom-text">
                                         <span class="font-2 half-transparent">500 živalskih vrst</span>
+                                        <div class="description font-3">
+                                            Pri nas najdete preko 500 različnih živalskih vrst iz vsega sveta. 
+                                            
+                                        </div>
                                     </div>
                                 </div>
                     </div>
                     <div class="s4-stretch-right">
                         <div class="from-bottom-container">
                                 <div class="from-bottom-text">
-                                    <span class="font-2 half-transparent">20km2 površin</span>
+                                    <span class="font-2 half-transparent">30ha površin</span>
+                                    <div class="description font-3">
+                                            Vse živali imajo dovolj lastnega prostora. Tudi za vas ga je dovolj.<br>
+                                            Ob sprehajali poti so prostori za piknik in druženje, ko se utrudite.
+                                        </div>
                                 </div>
                         </div>
                     </div>
@@ -220,6 +239,66 @@
                     </div>
                 </div>
 
+
+            </section>
+
+            <section id="section7">
+
+                <div class="bottom-bar-container">
+                    <div class="container-fluid bottom-bar">
+                        <div class="row">
+                            <div class="col">
+                                <div class="title font-2 a-bit-transparent">
+                                    Kontakt
+                                </div>
+                            </div>    
+                        </div>
+                        
+                        <div class="row full-width font-3 a-bit-transparent">
+                            <div class="col">
+                                <div class="address-lines">
+                                    <div class="address-line">Živalski vrt Kozjeglav</div>
+                                    <div class="address-line">Bazismed d.o.o.</div>
+                                    <div class="address-line">Trojarjevo nabrežje 7</div>
+                                    <div class="address-line">3224 Kamenice</div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="address-lines">
+                                    <div class="address-line">info</div>
+                                    <div class="address-line">Jelka Blažič</div>
+                                    <div class="address-line">01 363 81 62</div>
+                                    <div class="address-line">tajnistvo@kozjeglav.si</div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="address-lines">
+                                    <div class="address-line">prodaja</div>
+                                    <div class="address-line">Tamara Kukovič</div>
+                                    <div class="address-line">01 363 81 63</div>
+                                    <div class="address-line">prodaja@kozjeglav.si</div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="address-lines">
+                                    <div class="address-line">odpiralni čas</div>
+                                    <div class="address-line">Pon - Pet: 14.00 - 20.00</div>
+                                    <div class="address-line">Sob: 8.00 - 17.00</div>
+                                    <div class="address-line">Ned: 12.00 - 20.00</div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="address-lines">
+                                    <div class="address-line">Bazismed d.o.o.</div>
+                                    <div class="address-line">SI 26159927</div>
+                                    <div class="address-line">3771295610</div>
+                                    <div class="address-line"></div>
+                                    <div class="address-line">bazismed.si</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
             </section>
 
