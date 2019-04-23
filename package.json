@@ -1,0 +1,14 @@
+{
+  "name": "oo-spletna-stran",
+  "version": "0.0.1",
+  "description": "Spletna stran za osnove oblikovanja\u001b[H",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Lovro Suhadolnik",
+  "license": "BSD-1-Clause",
+  "dependencies": {
+    "bootstrap": "^4.3.1"
+  }
+}
