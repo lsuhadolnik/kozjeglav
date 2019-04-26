@@ -25,6 +25,10 @@ header {
 }
 
 .all-center-text-container {
+    position:absolute;
+    top:21px;
+    width: 100%;
+    z-index:999;
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -161,4 +165,17 @@ header {
     transition: 0.5s opacity ease-in-out;
     opacity: 1;
 
+}
+
+
+#section1_5 .container-fluid .row {
+    height: 100%;
+}
+
+#section1_5 .container-fluid {
+    display:flex;
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    height: 100%;
 }

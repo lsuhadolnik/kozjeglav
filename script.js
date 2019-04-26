@@ -1,10 +1,10 @@
 var beforeMoveF = function(idx) {
 
-    if(idx == 2){
+/*    if(idx == 2){
         resumeAntsAnimation();
     }else{
         stopAntsAnimation()
-    }
+    }*/
 
 }
 
@@ -39,5 +39,5 @@ setMove("Cenik", 7);
 setMove("Kontakt", 9);
 
 
-initAntsAnimation();
+//initAntsAnimation();
 

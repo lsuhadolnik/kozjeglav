@@ -63,7 +63,8 @@ function initAntsAnimation() {
         a_ctx.strokeRect(0,0,900,500);
     }
 
-    var colors = ["#1b0f00", "#2d1300", "#783201", "#3c1900"];
+    //var colors = ["#1b0f00", "#2d1300", "#783201", "#3c1900"];
+    var colors=["black"];
 
     setInterval(function() {drawWrap()}, 50);
 

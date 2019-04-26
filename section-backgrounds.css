@@ -7,28 +7,71 @@
     background: #392215; /* brown1 */
 }
 
-.bg-stretch-left {
+#section1_5 .x1{
+    background: url(img/s6_1_alt.jpg) 57% 0%;
+    background-size: cover;
+}
+#section1_5 .x2{
+    background: url(img/s6_2_alt.jpg) 57% 0%;
+    background-size: cover;
+}
+#section1_5 .x3{
+    background: url(img/s6_3.jpg) 57% 0%;
+    background-size: cover;
+}
+#section1_5 .x4{
+    background: url(img/s6_4_alt.jpg) 57% 0%;
+    background-size: cover;
+}
+#section1_5 .x5{
+    background: url(img/s6_5_alt.jpg) 57% 0%;
+    background-size: cover;
+}
+#section1_5 .x6{
+    background: url(img/s6_6.jpg) 57% 0%;
+    background-size: cover;
+}
+
+#section2 .bg-stretch-left {
     width: 50%;
     background: url(img/2_left_alt.jpg) 57% 0%;
     background-size: cover;
 }
-.bg-stretch-right {
+#section2 .bg-stretch-right {
     width: 50%;
     background: url(img/2_right_alt1.jpg) 60% 50%;
     background-size: cover;
 }
 
-#section3 {
-    background: url(img/3.jpg) 0 50%;
+#section3 .bg-stretch-left {
+    width: 50%;
+    background: url(img/3_left_1_alt.jpg) 0 26%;
+    background-size: cover;
+}
+#section3 .bg-stretch-right {
+    width: 50%;
+    background: url(img/3_right_1_alt.jpg) 57% 0%;
     background-size: cover;
 }
 
-#section4_1 {
-    background: #B1A992;
+/*#section3 {
+    background: url(img/3.jpg) 0 50%;
+    background-size: cover;
+}*/
+
+#section4_1 .bg-stretch-left {
+    width: 50%;
+    background: url(img/35_left_alt.jpg) 0 26%;
+    background-size: cover;
+}
+#section4_1 .bg-stretch-right {
+    width: 50%;
+    background: url(img/35_right.jpg) 77% 39%;
+    background-size: cover;
 }
 
 #section4 {
-    background: url(img/4.jpg) 0 0;
+    background: url(img/4_new.jpg) 0 0;
     background-size: cover;
 }
 
