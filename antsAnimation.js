@@ -6,6 +6,31 @@ var inter = null;
 var a_canvas = null;
 var a_ctx = null;
 
+var info = {
+    legLength : 30,
+    legWidth: 7,
+    w1 :16,
+    w2 :14,
+    wm1: 14,
+    wm2: 14,
+    offset1: 2,
+    offset2: 2
+};
+
+function lefLengthChange(e){
+    ;
+    debugger; 
+    info.legLength = event.target.value; 
+}
+function legWidthChange(e){;  info.legWidth = event.target.value}
+function legLengthChange(e){;  info.legLength = event.target.value}
+function w1Change(e){;        info.w1 = event.target.value}
+function wm1Change(e){;       info.wm1 = event.target.value}
+function w2Change(e){;        info.w2 = event.target.value}
+function wm2Change(e){;       info.wm2 = event.target.value}
+function offset1Change(e){;   info.offset1 = event.target.value}
+function offset2Change(e){;   info.offset2 = event.target.value}
+
 var startTime = new Date().getTime();
 
 function stopAntsAnimation() {
@@ -28,6 +53,7 @@ function resumeAntsAnimation() {
 function initAntsAnimation() {
 
     started = true;
+    let numAnts = 10;
 
 
     a_canvas = document.getElementById("canvasAnts");
@@ -41,7 +67,9 @@ function initAntsAnimation() {
 
     setInterval(function() {drawWrap()}, 50);
 
-    for(var i = 0; i < 5; i++){
+
+
+    for(var i = 0; i < numAnts; i++){
         ants.push({
             x : (Math.random() * window.innerWidth),
             y : (Math.random() * 1000),
@@ -85,37 +113,57 @@ function draw(ctx, w, h, time){
 
 }
 
+function drawLeg(ctx, a, x, y, deg, perc, left){
+
+    
+
+    ctx.beginPath();
+    ctx.strokeStyle = a.color;
+    
+    ctx.lineWidth=info.legWidth
+    ctx.moveTo(x, y);
+    if(left){
+        ctx.lineTo(x - info.legLength, y + info.legLength * perc - info.legLength / 2);
+    }
+    else{
+        ctx.lineTo(x + info.legLength, y + info.legLength * perc - info.legLength / 2);
+    }
+    
+    ctx.stroke();
+
+}
+
 function drawAnt(ctx, a){
+
+    var w1 = info.w1;
+    var w2 = info.w2;
+    var wm1 = info.wm1;
+    var wm2 = info.wm2;
+    var offset1 = info.offset1;
+    var offset2 = info.offset2;
 
     drawLeg(ctx, a, a.x, a.y, 0, a.perc1, true);
     drawLeg(ctx, a, a.x, a.y, 0, a.perc2, false);
-    drawLeg(ctx, a, a.x, a.y + 8 + 8, 0, a.perc3, true);
-    drawLeg(ctx, a, a.x, a.y + 8 + 8, 0, a.perc4, false);
+    drawLeg(ctx, a, a.x, a.y + (w1 +2)*2, 0, a.perc3, true);
+    drawLeg(ctx, a, a.x, a.y + (w1 +2)*2, 0, a.perc4, false);
 
     ctx.beginPath();
-    ctx.ellipse(a.x, a.y,   6, 6, 0, 0, 2*Math.PI);
+    ctx.ellipse(a.x, a.y,   w1, w2, 0, 0, 2*Math.PI);
     ctx.fillStyle = a.color;
     ctx.fill();
     ctx.beginPath();
-    ctx.ellipse(a.x, a.y + 8,   6, 4, 0, 0, 2*Math.PI);
+    ctx.ellipse(a.x, a.y + w1+offset1,   wm1, wm2, 0, 0, 2*Math.PI);
     ctx.fillStyle = a.color;
     ctx.fill();
     ctx.beginPath();
-    ctx.ellipse(a.x, a.y + 8 + 8, 6, 6, 0, 0, 2*Math.PI);
+    ctx.ellipse(a.x, a.y +w1+ +wm1+offset2, w1, w2, 0, 0, 2*Math.PI);
     ctx.fillStyle = a.color;
     ctx.fill();
 
-    
-    
     ascPerc(a, 1);
     ascPerc(a, 2);
     ascPerc(a, 3);
     ascPerc(a, 4);
-    
-
-    
-
-
     
 
 }
@@ -136,21 +184,5 @@ function ascPerc(a, idx){
 
 
 
-function drawLeg(ctx, a, x, y, deg, perc, left){
 
-    var legLength = 8.5;
-
-    ctx.beginPath();
-    ctx.strokeStyle = a.color;
-    ctx.moveTo(x, y);
-    if(left){
-        ctx.lineTo(x - legLength, y + legLength * perc - legLength / 2);
-    }
-    else{
-        ctx.lineTo(x + legLength, y + legLength * perc - legLength / 2);
-    }
-    
-    ctx.stroke();
-
-}
 
