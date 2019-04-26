@@ -7,7 +7,7 @@ var a_canvas = null;
 var a_ctx = null;
 
 var info = {
-    legLength : 30,
+    legLength : 25,
     legWidth: 7,
     w1 :16,
     w2 :14,
